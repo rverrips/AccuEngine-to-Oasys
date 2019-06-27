@@ -64,7 +64,7 @@ sqlite3 < sqlite.sql
 echo.
 echo * 6 - Runs sqlcmd.exe with SQL script from time_cards.sql to update the data *
 echo.
-sqlcmd -S S-EU-H7507-BO\Oasys -U vicas -P vicas -d OASYS2009_SC -itimecards.txt
+sqlcmd -S S-EU-H7507-BO\Oasys -U %sqlpassword% -P %sqlusername% -d OASYS2009_SC -itimecards.txt
 echo * 7 - Deletes dataout-records.txt, sqlite.sql, emp_master.txt, timecards.txt*
 echo.
 del dataout-records.txt sqlite.sql emp_master.txt timecards.txt
